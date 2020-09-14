@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import config from '../../server/config/default';
 
 export default class Navbar extends React.Component {
 
     constructor(props){
         super(props);
-
+        this.ipaddr = config.ipaddr; 
         this.state = {
             stream_key : ''
         };
@@ -66,7 +67,7 @@ export default class Navbar extends React.Component {
                                 You can use <a target="_blank" href="https://obsproject.com/">OBS</a> or
                                 <a target="_blank" href="https://www.xsplit.com/">XSplit</a> to Live stream. If you're
                                 using OBS, go to Settings > Stream and select Custom from service dropdown.
-                                Enter <b>rtmp://127.0.0.1:1935/live</b> in server input field. Also, add your stream key.
+                                Enter <b>rtmp://{this.ipaddr}:1935/live</b> in server input field. Also, add your stream key.
                                 Click apply to save.
                             </p>
                         </div>
