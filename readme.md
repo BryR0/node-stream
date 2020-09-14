@@ -38,6 +38,7 @@ Also change secret string. It will be used for session encryption.
 cd nodeStream && nano /server/config/default.js
 
 const config = {
+    ipaddr:"192.168.1.105", // view ip addrees "hostname -I" 
     server: {
         secret: 'kjVkuti2xAyF3JGCzSZTk0YWM5JhI9mgQW4rytXc',
         port : 3333
